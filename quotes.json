@@ -1,0 +1,49 @@
+{  
+   "quotes":[  
+      {  
+        "origin":"Lord of the Rings",
+         "aliases":["lotr", "lord of the rings"],
+         "quotes":["Sons of Gondor, of Rohan, my brothers! I see in your eyes the same fear that would take the heart of me. A day may come when the courage of men fails, when we forsake our friends, and break all bonds of fellowship; but it is not this day! An hour of wolves, and shattered shields, when the Age of Men comes crashing down; but it is not this day! This day we fight! By all that you hold dear on this good earth, I bid you stand, Men of the West!"]
+      },
+      {  
+        "origin":"Star Wars",
+         "aliases":["star wars"],
+         "quotes":["Amazing. Every word of what you just said was wrong. The Rebellion is reborn today. The war is just beginning. And I will not be the last Jedi."]
+      },
+      {  
+        "origin":"The Dark Knight",
+         "aliases":[ "batman", "the dark knight", "joker"],
+         "quotes":["Wanna know how I got these scars???........My father was a drinker....and a fiend..... So one night, he goes off crazier than usual. Mommy gets the kitchen knife to defend herself....He doesn't like that. Not....one....bit.....So,... me watching, he takes the knife to her, laughing while he does it. He looks at me.... and he says \"Why so serious?!\"....He comes at me with the knife......\"Why so serious?!!\"...\"Let's put a smile on that face!!\"......And......(looks at other gangster) Why so serious?"]
+      },
+      {  
+        "origin": "Taken",
+         "aliases":["taken", "liam neeson"],
+         "quotes":["I don't know who you are. I don't know what you want. If you are looking for ransom, I can tell you I don't have money. But what I do have are a very particular set of skills; skills I have acquired over a very long career. Skills that make me a nightmare for people like you. If you let my daughter go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you."]
+      },
+      {  
+        "origin":"Rocky",
+         "aliases":["rocky"],
+         "quotes":["It's your right to listen to your gut, it ain't nobody's right to say no after you earned the right to be where you want to be and do what you want to do! Now if you know what you're worth then go out and get what you're worth. But ya gotta be willing to take the hits, and not pointing fingers saying you ain't where you wanna be because of him, or her, or anybody! Cowards do that and that ain't you! 're better than that! I'm always gonna love you no matter what. No matter what happens. You're my son and you're my blood. You're the best thing in my life. But until you start believing in yourself, ya ain't gonna have a life."]
+      },
+      {  
+        "origin":"Shia LaBeouf",
+         "aliases":["do it", "shia labeouf"],
+         "quotes":["Do it, just do it! Don’t let your dreams be dreams. Yesterday you said tomorrow. So just do it! Make your dreams come true. Just do it. Some people dream of success, while you’re going to wake up and work hard at it. Nothing is impossible… you should get to the point where anyone else would quit and you’re not going to stop there. NO! What are you waiting for?! DO IT! JUST DO IT! YES YOU CAN! JUST DO IT! If you’re tired of starting over, stop giving up."]
+      },
+      {  
+        "origin":"Sonic kid",
+         "aliases":["lose my marbles", "marbles", "sonic"],
+         "quotes":["I'm so frickin' mad... I'm so frickin' mad... I mean, you guys... you guys... have officially made me LOSE MY MARBLES!!! WHY CAN'T YOU GUYS ASK FOR A 3D ENVIRONMENT CLASSIC SONIC GAME? This... *picks up chair* is a NIGHTMARE!!! *gently throws chair* I'm sure no Sonic fan predict... would predict that the adventure... the adventure fantasizers would RUIN EVERYTHING!!! *breathes* And now... I bet by now Se-Sega has got a frickin' Sonic Adventure 3 in development... with frickin' Sonic Team. 'Cause you FRICKIN 'FRICKS just can't ever... be quenched... Your... ah-, your FANTASIES just can't ever be quenched, can they?! You frickin' fricks! When will you learn... when will you learn... THAT YOUR ACTIONS HAVE CONSEQUENCES?!"]
+      },
+      {  
+        "origin":"Hot Tub vine",
+         "aliases":["hot tub"],
+         "quotes":["Two brooos, chilling in a hot tub, 5 feet apart coz they're not gay"]
+      },
+      {  
+        "origin":"Pirates of the Caribbean: At World's End",
+         "aliases":["potc", "pirates of the caribbean", "at world's end", "pirates"],
+         "quotes":["Res ipsa loquitur", "Why is the rum gone?", "One, because it is a vile drink that turns even the most respectable men into complete scoundrels. Two, that signal is over a thousand feet high. The entire Royal Navy is out looking for me. Do you really think that there is even the slightest chance that they won't see it?", "Whose boons? Your boons?", "Have not, slander and calumny! I have only ever embraced that oldest and noblest of pirate traditions. I submit here and now, that is what we all must do- we must fight... to run away."]
+      }
+   ]
+}
