@@ -1,0 +1,12 @@
+{
+  "name": "RebelsBot",
+  "main": "index.js",
+  "author": "RebelTrooper",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  },
+  "engines": {
+    "node": "12.x"
+  }
+}
