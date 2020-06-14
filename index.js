@@ -65,6 +65,7 @@ client.on('guildCreate', guild => {
 
 client.on('message', message => {
   if (message.author.bot) return;
+  client.user.setActivity('Type !rb for info');
 
   log(message);
 
