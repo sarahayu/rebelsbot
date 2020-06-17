@@ -8,6 +8,8 @@ aliases = [];
 quotes = [];
 mutedServers = [];
 
+const commandInfoStr = '\n< Commands >\n!rb shutup [minutes] OR !rb mute [minutes] to mute me temporarily\n!rb unmute to unmute me\n!rb status to get status\n\n';
+
 const log = message => {
   console.log(`[${new Date().toLocaleString()}] ${message.author.username} sent: ${message.content}`);
 }
@@ -17,13 +19,29 @@ const getRemainingMins = cid => {
 }
 
 const sendInfo = user => {
-  let table = '```markdown\n< Commands >\n!rb shutup [minutes] OR !rb mute [minutes] to mute me temporarily\n!rb unmute to unmute me\n!rb status to get status\n\n< Current Media Sources and Trigger Words >\n';
+  let table = '```markdown\n< Current Media Sources and Trigger Words >\n';
+  let tables = [];
 
   for (let key in aliases)
     if (aliases.hasOwnProperty(key))
-      table += key.padEnd(45) + aliases[key] + '\n';
+    {
+      let newline = key.padEnd(45) + aliases[key] + '\n';
+      if ((table + newline).length > (2000 - 3))
+      {
+        tables.push(table + '```');
+        table = '```markdown\n< Current Media Sources and Trigger Words (Continued) >\n';
+      }
 
-  user.send(table + '```');
+      table += newline;
+    }
+
+  if ((table + commandInfoStr).length > (2000 - 3))
+    tables.push(table + '```', '```markdown\n' + commandInfoStr + '```');
+  else 
+    tables.push(table + commandInfoStr + '```');
+
+  for (const t of tables)
+    user.send(t);
 }
 
 const getUntil = minutes => {
@@ -67,14 +85,14 @@ client.on('message', message => {
   if (message.author.bot) return;
   client.user.setActivity('Type !rb for info');
 
-  log(message);
-
   const channel = message.channel;
   const cid = channel.id;
   const messageStr = message.content.toLowerCase();
 
   if (messageStr.startsWith('!rb'))
   {
+    log(message);
+
     let args = messageStr.split(/ +/); args.shift();
 
     if (args.length >= 1 && (args[0] === 'shutup' || args[0] === 'mute') && (args.length == 1 || !isNaN(args[1])))
@@ -121,9 +139,14 @@ client.on('message', message => {
       delete mutedServers[cid];
     }
 
+    let words = messageStr.split(/[\s,\?\,\.!]+/);
+
     for (const keyword in keywords)
-      if (messageStr.includes(keyword))
+      // if keyword includes space, search for whole phrase; otherwise, look for word within array that is split by spaces or puncuation
+      if ((keyword.includes(" ") && messageStr.includes(keyword)) || words.some(w => w === keyword))
       {
+        log(message);
+
         let possibleQuotes = quotes[keywords[keyword]];
         channel.send(possibleQuotes[Math.floor(Math.random() * possibleQuotes.length)]);
         return;   // return on first instance to avoid spamming multiple quotes at once
