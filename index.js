@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const utf8 = require('utf8');
 const client = new Discord.Client();
 
 quotesJSON = require('./quotes.json');
@@ -148,7 +149,8 @@ client.on('message', message => {
         log(message);
 
         let possibleQuotes = quotes[keywords[keyword]];
-        channel.send(possibleQuotes[Math.floor(Math.random() * possibleQuotes.length)]);
+	// I can't Javascript send help, best I can do for now
+        channel.send(utf8.decode(utf8.encode(possibleQuotes[Math.floor(Math.random() * possibleQuotes.length)])));
         return;   // return on first instance to avoid spamming multiple quotes at once
       }
   }
